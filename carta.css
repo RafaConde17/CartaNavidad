@@ -1,8 +1,8 @@
 :root {
     --color-fondo: #f5f7fa;
     --color-texto: #1a1a1a;
-    --color-primario: #ee96f6;
-    --color-secundario: #e87aba;
+    --color-primario: #20dd52;
+    --color-secundario: #429b31;
 }
 
 /* ========== RESET ========== */
@@ -31,7 +31,7 @@ body {
 /* ========== HEADER ========== */
 .header {
     background: var(--color-secundario);
-    color: #fff;
+    color: #defcb4;
 }
 
 .header-content {
@@ -55,21 +55,36 @@ body {
     color: #fff;
 }
 
+
 /* ========== HERO ========== */
 .hero {
-    flex: 1; /* ocupa el espacio entre header y footer */
+    position: relative;        /* para poder colocar contenido encima */
+     flex: 1;            /* ocupa toda la pantalla */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: rgba(56, 237, 16, 0.964);
     background: var(--color-primario);
-    color: white;
-    padding: 20px;
+    padding: 0;
+    
+    /* Imagen de fondo */
+    background-image: url('carta.jpg');  /* reemplaza con tu imagen */
+    background-size: cover;               /* cubre todo el hero */
+    background-position: center;          /* centra la imagen */
+    background-repeat: no-repeat;         /* no repetir */
 }
 
+/* media query al final del CSS */
+@media (max-width: 768px) {
+    .hero {
+        background-image: url('carta2.png');
+    }
+}
 .hero h2 {
     font-size: 2.3rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+     font-family: 'Georgia', 'Times New Roman', serif;
 }
 
 /* ========== BOTÓN ========== */
@@ -307,3 +322,4 @@ body.locked {
 .popup {
     display: none;
 }
+
